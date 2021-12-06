@@ -2,6 +2,10 @@
 
 VK Word Counter
 
+## Live Project
+
+[vkwordcounter](https://vkwordcounter.netlify.app/)
+
 ## Project info
 1. Count the words in the textarea
 2. Count the characters in the textarea
