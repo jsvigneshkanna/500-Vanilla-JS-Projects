@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Side Panel Demo</title>
+    <script src="https://kit.fontawesome.com/cc14d01ebf.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container side-panel-open">
+      <div class="main-container">
+        <h1>Hi Vk!</h1>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, delectus voluptates natus, ut doloribus eos qui
+        veritatis iste fugiat dicta voluptate facilis rerum velit tenetur in aperiam molestiae! Ipsa, provident. Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Delectus reprehenderit voluptatem facere alias amet rerum
+        reiciendis, laudantium error repudiandae tempora! Nisi soluta aliquid consectetur reprehenderit suscipit
+        aspernatur, quae doloremque quasi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta doloremque,
+        dolor recusandae corporis quis maiores nemo nulla ad rerum. Esse obcaecati sapiente expedita optio mollitia
+        saepe pariatur laudantium facilis corrupti? Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+      </div>
+      <button class="toggle-btns" type="button">
+        <i class="fas fa-angle-double-right btn-close"></i>
+        <i class="fas fa-angle-double-left btn-open"></i>
+      </button>
+      <div class="side-container">
+        <h1>Side menu</h1>
+        <button>Home</button>
+        <button>About Us</button>
+        <button>Contact</button>
+        <button>Address</button>
+        <button>Education</button>
+      </div>
+    </div>
+
+    <!-- JS Script -->
+    <script>
+      const btnVal = document.querySelector(".toggle-btns");
+      btnVal.addEventListener("click", () => {
+        document.querySelector(".container").classList.toggle("side-panel-open");
+      });
+    </script>
+  </body>
+</html>
