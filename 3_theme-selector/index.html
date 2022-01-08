@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" id="themeStyle" href="dark.css" />
+    <title>Theme select Demo</title>
+  </head>
+  <body>
+    <div class="container page-container">
+      <nav class="navbar navbar-light">
+        <div class="container nav-container">
+          <a class="navbar-brand" href="#">
+            <img src="/images/logos/transparent-logo.png" alt="" width="80" height="80" />
+            Theme Selector
+          </a>
+          <select class="form-select dropdown" aria-label="themeSelect" style="width: fit-content">
+            <!-- <option selected>Select Theme</option> -->
+            <option id="dark" value="dark">Dark 🌚</option>
+            <option id="light" value="light">Light 🌞</option>
+          </select>
+        </div>
+      </nav>
+      <div class="main-container">
+        <h2>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum sequi voluptas autem eaque obcaecati
+          assumenda quaerat quasi pariatur. Ratione et delectus perferendis unde distinctio debitis sequi repellendus,
+          blanditiis provident labore.
+        </h2>
+      </div>
+    </div>
+
+    <script>
+      const optionValues = ["light", "dark"];
+      window.onload = () => {
+        const defaultTheme = localStorage.getItem("theme") || "dark";
+        document.querySelector("#themeStyle").setAttribute("href", `${defaultTheme}.css`);
+        document.getElementById(defaultTheme).selected = true;
+      };
+      const themeSelect = document.querySelector(".dropdown");
+      themeSelect.addEventListener("change", () => {
+        const selectValue = themeSelect.value;
+        document.querySelector("#themeStyle").setAttribute("href", `${themeSelect.value}.css`);
+        localStorage.setItem("theme", themeSelect.value);
+        // optionValues.forEach((option) => {
+        //   if (option === selectValue) {
+        //     document.getElementById(option).selected = true;
+        //     console.log(document.getElementById(option).selected);
+        //   } else {
+        //     document.getElementById(option).selected = false;
+        //   }
+        // });
+      });
+    </script>
+  </body>
+</html>
