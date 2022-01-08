@@ -1,0 +1,14 @@
+body {
+  height: 100vh;
+  background-color: var(--backgroundcolor);
+  color: var(--fontcolor);
+}
+.nav-container {
+  /* border: 5rem white; */
+  /* background-color: white; */
+  border-radius: 10px;
+  /* border-width: 5px;
+  border-color: white; */
+  border-bottom: 5px white;
+  border-bottom-style: solid;
+}
