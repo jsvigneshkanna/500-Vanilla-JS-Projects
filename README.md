@@ -6,7 +6,7 @@ Repository consisting of lot of vanilla projects. Come lets all learn vanilla JS
 
 1. Word Counter - [Live...](https://birthreminders.netlify.app/)
 2. css-js page pop out side panel - [Live...](https://vksidepanel.vercel.app/)
-3. Theme selector -
+3. Theme selector - [Live...](https://vkthemeselector.vercel.app/)
 
 # Reference
 
